@@ -1,0 +1,356 @@
+@import "layout/var";
+
+.do {
+  padding: 98px 0 0;
+
+  @media #{$lg} {
+    padding-top: 50px;
+  }
+
+  @media #{$xs} {
+    padding-top: 30px;
+  }
+
+  .container {
+    padding-bottom: 136px;
+    position: relative;
+
+    @media #{$lg} {
+      padding-bottom: 50px;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 40px;
+      left: 8px;
+      border-left: 2px dashed rgba(255, 255, 255, 0.13);
+      width: 1px;
+      height: calc(100% - 40px);
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 23px;
+      left: 383px;
+      border-top: 2px dashed rgba(255, 255, 255, 0.13);
+      width: calc(100% - 383px);
+      height: 1px;
+
+      @media #{$sm} {
+        left: 280px;
+        top: 15px;
+        width: calc(100% - 280px);
+      }
+
+      @media #{$xs} {
+        display: none;
+      }
+    }
+  }
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 67px;
+
+    @media #{$xs} {
+      margin-top: 20px;
+      flex-direction: column;
+    }
+
+    &:last-child {
+      position: relative;
+      margin-top: 87px;
+
+      @media #{$xs} {
+        margin-top: 0;
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -44px;
+        left: 20px;
+        right: 20px;
+        border-top: 2px dashed rgba(255, 255, 255, 0.13);
+        height: 1px;
+
+        @media #{$xs} {
+          display: none;
+        }
+      }
+
+      .do__item {
+        position: relative;
+
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: calc(100% + 13px);
+          left: 50%;
+          border-left: 2px dashed rgba(255, 255, 255, 0.13);
+          width: 1px;
+          height: 31px;
+
+          @media #{$xs} {
+            left: 8px;
+            top: 68px;
+            height: 1px;
+            width: 50%;
+            border-left: 0;
+            border-top: 2px dashed rgba(255,255,255,0.13);
+            z-index: 0;
+          }
+        }
+
+        &:first-child {
+          &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: calc(100% + 41px);
+            right: 50%;
+            width: calc(50% - 20px);
+            height: 5px;
+            background: $dark;
+
+            @media #{$xs} {
+              display: none;
+            }
+          }
+        }
+
+        &:last-child {
+          &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: calc(100% + 41px);
+            left: 50%;
+            width: calc(50% - 20px);
+            height: 5px;
+            background: $dark;
+
+            @media #{$xs} {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    &--top {
+      position: relative;
+
+      .do__item {
+        position: relative;
+
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: calc(100% + 13px);
+          left: 50%;
+          border-left: 2px dashed rgba(255, 255, 255, 0.13);
+          width: 1px;
+          height: 82px;
+
+          @media #{$sm} {
+            height: 76px;
+          }
+
+          @media #{$xs} {
+            left: 8px;
+            top: 68px;
+            height: 1px;
+            width: 50%;
+            border-left: 0;
+            border-top: 2px dashed rgba(255,255,255,0.13);
+            z-index: 0;
+          }
+        }
+
+        &:first-child {
+          &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: calc(100% + 13px);
+            left: 50%;
+            margin-left: -12px;
+            border-left: 2px dashed rgba(255, 255, 255, 0.13);
+            border-right: 2px dashed rgba(255, 255, 255, 0.13);
+            width: 24px;
+            height: 45px;
+
+            @media #{$xs} {
+              left: 8px;
+              margin-left: 0;
+              top: 68px;
+              bottom: auto;
+              border: 0;
+              border-top: 2px dashed rgba(255,255,255,0.13);
+              width: 50%;
+              height: 1px;
+              z-index: 0;
+            }
+          }
+
+          &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: calc(100% + 13px);
+            left: calc(50% + 14px);
+            border-top: 2px dashed rgba(255, 255, 255, 0.13);
+            width: calc(50% - 14px);
+            height: 1px;
+
+            @media #{$xs} {
+              display: none;
+            }
+          }
+        }
+
+        &:nth-child(2) {
+          &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -14px;
+            left: 0;
+            border-left: 2px dashed rgba(255, 255, 255, 0.13);
+            width: 1px;
+            height: calc(100% + 14px + 45px);
+
+            @media #{$xs} {
+              display: none;
+            }
+          }
+        }
+
+        &:last-child {
+          &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: calc(100% + 93px);
+            left: 50%;
+            width: 50%;
+            height: 5px;
+            background: $dark;
+            z-index: 10;
+
+            @media #{$sm} {
+              bottom: calc(100% + 85px);
+            }
+
+            @media #{$xs} {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    width: 33.3%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media #{$xs} {
+      width: 100%;
+    }
+
+    &--orange {
+      .do__icon {
+        background: $orange;
+      }
+
+      .do__name {
+        @include tagNoSlash($orange, 2px, 2px);
+      }
+    }
+
+    &--rose {
+      .do__icon {
+        background: $rose;
+      }
+
+      .do__name {
+        @include tagNoSlash($rose, 2px, 2px);
+      }
+    }
+
+    &--green {
+      .do__icon {
+        background: $green;
+      }
+
+      .do__name {
+        @include tagNoSlash($green, 2px, 2px);
+      }
+    }
+
+    &--blue {
+      .do__icon {
+        background: $blue;
+      }
+
+      .do__name {
+        @include tagNoSlash($blue, 2px, 2px);
+      }
+    }
+
+    &--purple {
+      .do__icon {
+        background: $purple;
+      }
+
+      .do__name {
+        @include tagNoSlash($purple, 2px, 2px);
+      }
+    }
+  }
+
+  &__icon {
+    width: 175px;
+    height: 136px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media #{$xs} {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__name {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    line-height: 31px;
+    margin-top: 22px;
+
+    @media #{$sm} {
+      font-size: 20px;
+    }
+
+    @media #{$xs} {
+      font-size: 18px;
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+  }
+}

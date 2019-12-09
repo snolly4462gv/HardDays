@@ -1,0 +1,86 @@
+@import "layout/var";
+
+.top {
+  background: url('../img/top-bg.jpg') no-repeat center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #1C1C17;
+    opacity: 0.9;
+    z-index: 0;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-size: 91px;
+
+    @include tag($orange, 12px, 21px);
+
+    @media #{$xs} {
+      font-size: 50px;
+    }
+  }
+
+  &__text {
+    color: white;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 155.25%;
+    font-family: $textFont;
+    margin-top: 23px;
+
+    @media #{$xs} {
+      font-size: 16px;
+    }
+  }
+
+  &__button {
+    margin-top: 23px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__more {
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 40px;
+    cursor: pointer;
+    font-size: 30px;
+    padding-bottom: 17px;
+
+    @media #{$xs} {
+      font-size: 20px;
+      bottom: 20px;
+    }
+
+    &:after {
+      content: '>';
+      color: $orange;
+      position: absolute;
+      bottom: 0;
+      line-height: 10px;
+      left: 50%;
+      transform: translateX(-50%) rotate(90deg);
+    }
+  }
+}

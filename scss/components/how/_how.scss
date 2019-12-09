@@ -1,0 +1,136 @@
+@import "layout/var";
+
+.how {
+  padding: 104px 0 125px;
+  background: $light;
+
+  @media #{$lg} {
+    padding: 50px 0;
+  }
+
+  @media #{$xs} {
+    padding: 30px 0 10px;
+  }
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+
+    @media #{$xs} {
+      margin-top: 20px;
+      flex-direction: column;
+    }
+  }
+
+  &__block {
+    width: 29.3%;
+    flex-shrink: 0;
+    border: 3px solid white;
+    border-radius: 4px;
+    padding: 18px 30px 60px;
+
+    @media #{$sm} {
+      width: 32%;
+      padding: 15px 15px 30px;
+    }
+
+    @media #{$xs} {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    &--green {
+      border-color: $green;
+
+      .how__name {
+        color: $green;
+      }
+
+      .how__list-item {
+        &:before {
+          color: $green;
+        }
+      }
+    }
+
+    &--purple {
+      border-color: $purple;
+
+      .how__name {
+        color: $purple;
+      }
+
+      .how__list-item {
+        &:before {
+          color: $purple;
+        }
+      }
+    }
+
+    &--blue {
+      border-color: $blue;
+
+      .how__name {
+        color: $blue;
+      }
+
+      .how__list-item {
+        &:before {
+          color: $blue;
+        }
+      }
+    }
+  }
+
+  &__num {
+    font-size: 35px;
+    line-height: 37px;
+
+    @media #{$sm} {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  &__name {
+    margin-top: 23px;
+    font-size: 35px;
+
+    @include tagNoSlash(white, 2px, 2px);
+
+    @media #{$sm} {
+      margin-top: 17px;
+      font-size: 24px;
+    }
+  }
+
+  &__list {
+    margin: 22px 0 0;
+    padding: 0;
+    list-style: none;
+
+    @media #{$sm} {
+      margin-top: 16px;
+    }
+  }
+
+  &__list-item {
+    font-size: 18px;
+    line-height: 155.25%;
+    font-family: $textFont;
+    position: relative;
+    padding-left: 18px;
+
+    @media #{$sm} {
+      font-size: 14px;
+    }
+
+    &:before {
+      content: '>';
+      position: absolute;
+      left: 0;
+      top: -2px;
+    }
+  }
+}

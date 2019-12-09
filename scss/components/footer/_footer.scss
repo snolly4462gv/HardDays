@@ -1,0 +1,64 @@
+@import "layout/var";
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 21px 80px 16px;
+
+  @media (max-width: 1330px) {
+    padding: 21px 50px 16px;
+  }
+
+  @media #{$sm} {
+    padding: 21px 30px 16px;
+  }
+
+  @media #{$xs} {
+    padding: 21px 15px 16px;
+  }
+
+  &__menu-wrap {
+    margin: 0 auto;
+
+    @media #{$xs} {
+      display: none!important;
+    }
+  }
+
+  &__menu {
+    .header__link {
+      font-size: 14px;
+      margin: 0 27px;
+
+      @media (max-width: 1330px) {
+        margin: 0 15px;
+      }
+
+      @media #{$lg} {
+        font-size: 13px;
+        margin: 0 10px;
+      }
+
+      @media #{$sm} {
+        font-size: 11px;
+        margin: 0 8px;
+      }
+    }
+  }
+
+  &__copy {
+    width: 100%;
+    text-align: center;
+    margin-top: 27px;
+    font-size: 14px;
+    line-height: 19px;
+    font-family: $textFont;
+
+    @media #{$sm} {
+      margin-top: 10px;
+      font-size: 10px;
+    }
+  }
+}

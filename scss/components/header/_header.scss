@@ -1,0 +1,187 @@
+@import "layout/var";
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  padding: 22px 80px;
+
+  @media (max-width: 1330px) {
+    padding: 22px 50px;
+  }
+
+  @media #{$sm} {
+    padding: 10px 30px;
+  }
+
+  @media #{$xs} {
+    padding: 10px 15px;
+    flex-wrap: wrap;
+  }
+
+  &--scrolling {
+    background: $dark;
+  }
+
+  &__logo {
+    color: white;
+    font-size: 25px;
+    position: relative;
+
+    @media #{$sm} {
+      font-size: 20px;
+    }
+
+    @media #{$xs} {
+      order: 0;
+    }
+
+    &:before {
+      content: '<';
+      color: $orange;
+      margin-right: 4px;
+    }
+
+    &:after {
+      content: '/>';
+      color: $orange;
+      margin-left: 6px;
+    }
+  }
+
+  &__menu-wrap {
+    margin-left: auto;
+
+    @media #{$xs} {
+      display: none;
+      order: 3;
+      overflow: hidden;
+    }
+
+    &--opened {
+      @media #{$xs} {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+
+    @media #{$xs} {
+      flex-direction: column;
+      align-items: center;
+      padding: 15px 0 0;
+    }
+  }
+
+  &__link {
+    color: white;
+    font-family: $textFont;
+    font-weight: 300;
+    font-size: 16px;
+    margin: 0 18px 0;
+    line-height: 18px;
+    letter-spacing: 0.08em;
+
+    @media (max-width: 1330px) {
+      margin: 0 14px;
+    }
+
+    @media #{$lg} {
+      font-size: 13px;
+      margin: 0 10px;
+    }
+
+    @media #{$sm} {
+      font-size: 11px;
+      margin: 0 8px;
+    }
+
+    @media #{$xs} {
+      margin: 5px 0;
+      font-size: 13px;
+    }
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  &__lang {
+    margin-left: 67px;
+    position: relative;
+
+    @media #{$lg} {
+      margin-left: 20px;
+    }
+
+    @media #{$sm} {
+      margin-left: 10px;
+    }
+
+    @media #{$xs} {
+      margin-left: auto;
+      order: 1;
+    }
+  }
+
+  &__lang-cur {
+    font-size: 16px;
+    line-height: 18px;
+    color: white;
+    font-family: $textFont;
+    letter-spacing: 0.08em;
+    padding-right: 16px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+
+    @media #{$sm} {
+      font-size: 12px;
+    }
+
+    &:hover {
+      color: $orange;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 12px;
+      height: 7px;
+      background: url('../img/lang-arrow.svg');
+      top: 2px;
+      right: 0;
+    }
+  }
+
+  &__mobile-menu-button {
+    display: none;
+    margin-left: 20px;
+    cursor: pointer;
+
+    @media #{$xs} {
+      display: block;
+      order: 2;
+    }
+
+    span {
+      display: block;
+      width: 23px;
+      height: 1px;
+      background: white;
+      margin-bottom: 5px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

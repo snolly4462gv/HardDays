@@ -1,0 +1,268 @@
+@import "layout/var";
+
+.portfolio {
+  background: $light;
+  padding: 72px 0 151px;
+
+  @media #{$lg} {
+    padding: 50px 0 100px;
+  }
+
+  @media #{$xs} {
+    padding: 30px 0 40px;
+  }
+
+  &__slider-wrap {
+    border: 2px dashed $borderColor;
+    margin-top: 40px;
+    position: relative;
+    background: $dark;
+
+    @media #{$xs} {
+      margin-top: 30px;
+    }
+  }
+
+  &__slider {
+
+  }
+
+  &__slide {
+
+  }
+
+  &__flex {
+    display: flex;
+    align-items: center;
+    padding: 70px 90px 70px 30px;
+
+    @media #{$sm} {
+      padding: 20px 30px 20px 15px;
+    }
+
+    @media #{$xs} {
+      padding: 15px;
+      flex-direction: column;
+    }
+  }
+
+  &__image {
+    width: 50%;
+    flex-shrink: 0;
+
+    @media #{$xs} {
+      width: 100%;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__content {
+    margin-left: 40px;
+    font-size: 16px;
+    line-height: 155.25%;
+
+    @media #{$sm} {
+      font-size: 14px;
+      margin-left: 15px;
+    }
+
+    @media #{$xs} {
+      margin-top: 15px;
+      margin-left: 0;
+    }
+  }
+
+  &__name {
+    color: $orange;
+    font-size: 35px;
+    line-height: 37px;
+
+    @media #{$sm} {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  &__description {
+    margin-top: 30px;
+    font-family: $textFont;
+
+    @media #{$sm} {
+      margin-top: 15px;
+    }
+
+    @media #{$xs} {
+      text-align: justify;
+    }
+  }
+
+  &__dev-name {
+    font-size: 20px;
+    line-height: 21px;
+    color: $green;
+    margin-top: 25px;
+
+    @media #{$sm} {
+      font-size: 17px;
+      margin-top: 15px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 11px 0 25px;
+    padding: 0;
+
+    li {
+      font-size: 16px;
+      line-height: 155.25%;
+      font-family: $textFont;
+      padding-left: 18px;
+      position: relative;
+
+      @media #{$sm} {
+        font-size: 14px;
+      }
+
+      &:before {
+        content: '>';
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: $green;
+      }
+    }
+  }
+
+  &__price {
+    margin-top: 15px;
+
+    @media #{$sm} {
+      margin-top: 10px;
+    }
+
+    span {
+      color: $purple;
+    }
+  }
+
+  &__term {
+    margin-top: 15px;
+
+    @media #{$sm} {
+      margin-top: 10px;
+    }
+
+    span {
+      color: $blue;
+    }
+  }
+
+  &__buttons {
+    margin-top: 32px;
+    display: flex;
+
+    @media #{$sm} {
+      margin-top: 25px;
+    }
+
+    a {
+      margin-right: 7px;
+    }
+  }
+
+
+  .slick-arrow {
+    position: absolute;
+    width: 23px;
+    height: 26px;
+    color: transparent;
+    font-size: 0;
+    background: url('../img/portfolio-arrow.svg');
+    top: 50%;
+    margin-top: -13px;
+
+    @media #{$lg} {
+      top: calc(100% + 38px);
+    }
+
+    @media #{$xs} {
+      background-size: cover;
+      width: 12px;
+      height: 13px;
+      top: calc(100% + 28px);
+    }
+
+    &.slick-prev {
+      transform: scale(-1,1);
+      right: calc(100% + 30px);
+
+      @media (max-width: 1330px) {
+        right: calc(100% + 7px);
+      }
+
+      @media #{$lg} {
+        right: 80%;
+      }
+    }
+
+    &.slick-next {
+      left: calc(100% + 30px);
+
+      @media (max-width: 1330px) {
+        left: calc(100% + 7px);
+      }
+
+      @media #{$lg} {
+        left: 80%;
+      }
+    }
+  }
+
+  .slick-dots {
+    position: absolute;
+    top: calc(100% + 26px);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @media #{$xs} {
+      top: calc(100% + 10px);
+    }
+
+    li {
+      margin: 0 6px;
+
+      @media #{$xs} {
+        margin: 0 4px;
+      }
+
+      button {
+        color: transparent;
+        font-size: 0;
+        width: 10px;
+        height: 10px;
+        background: rgba(255, 255, 255, 0.09);
+        transition: 0.3s;
+
+        @media #{$xs} {
+          width: 6px;
+          height: 6px;
+        }
+      }
+
+      &.slick-active {
+        button {
+          background: $orange;
+        }
+      }
+    }
+  }
+}

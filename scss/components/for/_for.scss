@@ -1,0 +1,129 @@
+@import "layout/var";
+
+.for {
+  padding-bottom: 115px;
+
+  @media #{$lg} {
+    padding-bottom: 70px;
+  }
+
+  @media #{$xs} {
+    padding-bottom: 30px;
+  }
+
+  &__line {
+    width: 1px;
+    margin-left: 8px;
+    height: 183px;
+    border-left: 2px dashed $borderColor;
+
+    @media #{$lg} {
+      height: 70px;
+    }
+
+    @media #{$xs} {
+      height: 30px;
+    }
+  }
+
+  &__flex {
+    display: flex;
+    margin-top: 53px;
+
+    @media #{$xs} {
+      flex-wrap: wrap;
+      margin-top: 20px;
+      justify-content: space-between;
+    }
+  }
+
+  &__content {
+    font-family: $textFont;
+    font-size: 16px;
+    line-height: 155.25%;
+    width: 51%;
+    flex-shrink: 0;
+    margin-right: auto;
+
+    @media #{$xs} {
+      width: 100%;
+      font-size: 14px;
+      text-align: justify;
+    }
+
+    p {
+      margin-bottom: 47px;
+
+      @media #{$xs} {
+        margin-bottom: 20px;
+      }
+
+      strong {
+        font-family: $boldFont;
+      }
+    }
+  }
+
+  &__block {
+    margin-left: 82px;
+
+    @media #{$sm} {
+      margin-left: 30px;
+    }
+
+    @media #{$xs} {
+      margin-left: 0;
+      margin-top: 20px;
+      width: 45%;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 149px;
+    flex-shrink: 0;
+    border-radius: 4px;
+
+    @media #{$lg} {
+      width: 150px;
+      height: 112px;
+
+      img {
+        max-height: 75%;
+      }
+    }
+
+    @media #{$xs} {
+      width: 100%;
+    }
+
+    &--orange {
+      background: $orange;
+    }
+
+    &--purple {
+      background: $purple;
+    }
+  }
+
+  &__name {
+    margin-top: 18px;
+    font-size: 30px;
+    text-align: center;
+    display: block;
+
+    @include tagNoSlash($orange, 2px, 2px);
+
+    @media #{$sm} {
+      font-size: 24px;
+    }
+
+    @media #{$xs} {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+  }
+}

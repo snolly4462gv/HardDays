@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'Vin Slab Pro Light';
+  src: url('../fonts/VinSlabPro-Light.otf') format('otf'),
+    url('../fonts/VinSlabPro-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue Cyr Light';
+  src: url('../fonts/HelveticaNeueCyr-Light.eot');
+  src: url('../fonts/HelveticaNeueCyr-Light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/HelveticaNeueCyr-Light.woff') format('woff'),
+  url('../fonts/HelveticaNeueCyr-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$mainFont: 'Vin Slab Pro Light', sans-serif;
+$textFont: 'Helvetica Neue Cyr Light', sans-serif;
+$boldFont: 'Helvetica Neue Cyr Bold', sans-serif;
+
+//colors
+
+$orange: #FFA901;
+$rose: #DB3C71;
+$green: #B2D73C;
+$blue: #90D7EE;
+$yellow: #EFE61A;
+$purple: #A386FC;
+
+$dark: #20201B;
+$light: #282823;
+
+$borderColor: #474842;
+
+//responsive
+
+$lg: (max-width: 1199px);
+$sm: (max-width: 991px);
+$xs: (max-width: 767px);
+
+// mixins
+
+@mixin placeholderColor($color) {
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+  &::-ms-input-placeholder {
+    color: $color;
+  }
+  &::placeholder {
+    color: $color;
+  }
+}
+
+@mixin tag($color, $left, $right) {
+  &:before {
+    content: '<';
+    color: $color;
+    margin-right: $left;
+  }
+  &:after {
+    content: '/>';
+    color: $color;
+    margin-left: $right;
+  }
+}
+
+@mixin tagNoSlash($color, $left, $right) {
+  &:before {
+    content: '<';
+    color: $color;
+    margin-right: $left;
+  }
+  &:after {
+    content: '>';
+    color: $color;
+    margin-left: $right;
+  }
+}

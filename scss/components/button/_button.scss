@@ -1,0 +1,47 @@
+@import "layout/var";
+
+.button {
+  border-radius: 5px;
+  border: 1px solid $green;
+  font-family: $boldFont;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 19px 26px 17px 56px;
+  position: relative;
+
+  @media #{$sm} {
+    font-size: 14px;
+    padding: 15px 20px 13px 50px;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent transparent transparent $green;
+    border-style: solid;
+    border-width: 11.5px 0 11.5px 16px;
+    position: absolute;
+    left: 23px;
+    top: 18px;
+    transition: 0.3s;
+
+    @media #{$sm} {
+      border-width: 8px 0 8px 12px;
+      top: 15px;
+    }
+  }
+
+  &:hover {
+    color: black;
+    background: $green;
+
+    &:before {
+      border-color: transparent transparent transparent black;
+    }
+  }
+}

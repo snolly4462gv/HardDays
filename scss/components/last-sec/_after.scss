@@ -1,0 +1,76 @@
+@import "layout/var";
+
+.after {
+  background: $light;
+  display: flex;
+
+  @media #{$xs} {
+    flex-direction: column;
+  }
+
+  &__left {
+    width: 50%;
+    flex-shrink: 0;
+    display: flex;
+    background: url('../img/after-bg.png') no-repeat;
+    background-size: cover;
+
+    @media #{$xs} {
+      width: 100%;
+      padding: 50px 0;
+    }
+  }
+
+  &__title {
+    margin: auto;
+    font-size: 100px;
+    line-height: 105px;
+
+    @media #{$sm} {
+      font-size: 70px;
+      line-height: 80px;
+    }
+
+    @media #{$xs} {
+      font-size: 40px;
+      line-height: 45px;
+    }
+
+    &:after {
+      content: '/--->';
+    }
+  }
+
+  &__content {
+    padding: 153px 86px;
+    width: 528px;
+    font-size: 16px;
+    line-height: 155.25%;
+    font-family: $textFont;
+    position: relative;
+    z-index: 4;
+
+    @media #{$lg} {
+      padding: 80px 40px;
+      width: 360px;
+    }
+
+    @media #{$xs} {
+      width: 100%;
+      padding: 30px 15px;
+      text-align: justify;
+    }
+
+    strong {
+      font-family: $boldFont;
+    }
+
+    p {
+      margin-bottom: 30px;
+
+      @media #{$xs} {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
