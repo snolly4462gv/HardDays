@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/slick.css"/>
 
     <link rel="stylesheet" type="text/css" href="css/style.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style2.css"/>
   
 </head>
 <body>
@@ -20,17 +21,21 @@
             <!-- Add class "header__menu-wrap--opened" for mobile opened menu -->
             <div class="header__menu-wrap">
                 <nav class="header__menu">
-                    <a href="#" class="header__link">Кто мы</a>
-                    <a href="#" class="header__link">Что мы делаем</a>
-                    <a href="#" class="header__link">Для кого делаем</a>
-                    <a href="#" class="header__link">Как делаем</a>
-                    <a href="#" class="header__link">Цена</a>
-                    <a href="#" class="header__link">Портфолио</a>
-                    <a href="#" class="header__link">Контакты</a>
+                    <a href="#who" class="header__link i18n_whoweare">Кто мы</a>
+                    <a href="#do" class="header__link">Что мы делаем</a>
+                    <a href="#for" class="header__link">Для кого делаем</a>
+                    <a href="#how" class="header__link">Как делаем</a>
+                    <a href="#price" class="header__link">Цена</a>
+                    <a href="#portfolio" class="header__link">Портфолио</a>
+                    <a href="#contacts" class="header__link">Контакты</a>
                 </nav>
             </div>
-            <div class="header__lang">
+            <div class="header__lang header__lang-top">
                 <span class="header__lang-cur">RU</span>
+                <ul class="header__lang-block header__lang-block--top">
+                    <li class="change-lang-ru">RU</li>
+                    <li class="change-lang-en">EN</li>
+                </ul>
             </div>
             <button class="header__mobile-menu-button">
                 <span></span>
@@ -42,12 +47,12 @@
         <h1 class="top__title">HardDays</h1>
         <p class="top__text">Оставьте ваши тяжелые будни нам</p>
 
-        <button class="button top__button">Связаться с нами</button>
+        <button class="button top__button navigate-to-contact i18n_contactus">Связаться с нами</button>
 
-        <span class="top__more">Больше</span>
+        <span class="top__more i18n_topmore">Больше</span>
     </section>
 
-    <section class="who">
+    <section class="who" id="who">
         <div class="container">
             <h2 class="title title--rose">Кто мы</h2>
 
@@ -55,7 +60,7 @@
                 <div class="who__left">
                     <p>Hard Days – это компания стремительно развивающаяся на рынке создания программного обеспечения под ключ. Компания включает в себя большое количество квалифицированных специалистов с опытом работы в IT индустрии от 8 лет, развивает и обучает молодых специалистов. Компания имеет свои представительства и офисы в Америке, Европе и Азии.</p>
 
-                    <button class="button">Связаться с нами</button>
+                    <button class="button navigate-to-contact i18n_contactus">Связаться с нами</button>
                 </div>
                 <div class="who__statistic">
                     <p class="who__num">8+</p>
@@ -76,7 +81,7 @@
         </div>
     </section>
 
-    <section class="do">
+    <section class="do" id="do">
         <div class="container">
             <h2 class="title title--orange do__title">Что мы делаем</h2>
 
@@ -111,7 +116,7 @@
         </div>
     </section>
 
-    <section class="stack">
+    <section class="stack" id="stack">
         <div class="container">
             <div class="stack__flex">
                 <div class="stack__content">
@@ -137,7 +142,7 @@
         </div>
     </section>
 
-    <section class="for">
+    <section class="for" id="for">
         <div class="container">
             <div class="for__line"></div>
             <h2 class="title title--green">Для кого делаем</h2>
@@ -146,7 +151,7 @@
                 <div class="for__content">
                     <p>Мы работаем как с молодыми <strong>стартапами</strong>, помогая им выбрать и реализовать запоминающийся стиль, так и с <strong>компаниями</strong>, которые хотят повысить свои продажи</p>
 
-                    <button class="button">Связаться с нами</button>
+                    <button class="button navigate-to-contact i18n_contactus">Связаться с нами</button>
                 </div>
                 <div class="for__block">
                     <div class="for__icon for__icon--orange"><img src="img/for1.svg" alt=""></div>
@@ -160,7 +165,7 @@
         </div>
     </section>
 
-    <section class="how">
+    <section class="how" id="how">
         <div class="container">
             <h2 class="title title--orange">Как мы работаем</h2>
 
@@ -199,7 +204,7 @@
         </div>
     </section>
 
-    <section class="price">
+    <section class="price" id="price">
         <div class="container">
             <h2 class="title title--rose">Сколько стоит</h2>
 
@@ -220,7 +225,7 @@
         </div>
     </section>
 
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="container">
             <h2 class="title title--orange">Портфолио</h2>
 
@@ -275,7 +280,7 @@
         </div>
     </section>
 
-    <section class="last-sec">
+    <section class="last-sec" >
         <div class="after">
             <div class="after__left">
                 <h2 class="title title--green after__title">А что<br> потом?</h2>
@@ -283,11 +288,11 @@
             <div class="after__content">
                 <p><strong>Support</strong></p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud Lorem ipsum dolor sit amet, consec sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud Lorem ipsum dolo</p>
-                <button class="button">Связаться с нами</button>
+                <button class="button navigate-to-contact i18n_contactus">Связаться с нами</button>
             </div>
         </div>
 
-        <div class="contacts">
+        <div class="contacts" id="contacts">
             <div class="container">
                 <h2 class="title title--rose">Контакты</h2>
                 <div class="contacts__flex">
@@ -319,17 +324,21 @@
         <div class="header__logo">HardDays</div>
         <div class="header__menu-wrap footer__menu-wrap">
             <nav class="header__menu footer__menu">
-                <a href="#" class="header__link">Кто мы</a>
-                <a href="#" class="header__link">Что мы делаем</a>
-                <a href="#" class="header__link">Для кого делаем</a>
-                <a href="#" class="header__link">Как делаем</a>
-                <a href="#" class="header__link">Цена</a>
-                <a href="#" class="header__link">Портфолио</a>
-                <a href="#" class="header__link">Контакты</a>
+                <a href="#who" class="header__link">Кто мы</a>
+                <a href="#do" class="header__link">Что мы делаем</a>
+                <a href="#for" class="header__link">Для кого делаем</a>
+                <a href="#how" class="header__link">Как делаем</a>
+                <a href="#price" class="header__link">Цена</a>
+                <a href="#portfolio" class="header__link">Портфолио</a>
+                <a href="#contacts" class="header__link">Контакты</a>
             </nav>
         </div>
-        <div class="header__lang">
+        <div class="header__lang header__lang-bottom">
             <span class="header__lang-cur">RU</span>
+            <ul class="header__lang-block header__lang-block--bottom">
+                <li class="change-lang-ru">RU</li>
+                <li class="change-lang-en">EN</li>
+            </ul>
         </div>
 
         <p class="footer__copy">Copyright © Hard days. All rights reserved.</p>
@@ -337,6 +346,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
+    <script type="text/javascript" src="js/script2.js"></script>
     <script>
         $(document).ready(function() {
             $('.portfolio__slider').slick({

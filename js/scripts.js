@@ -243,4 +243,19 @@ $(document).ready(function() {
     $('.message__arrow').click(function() {
         $('html, body').animate({ scrollTop: $('.contact-block').offset().top });
     });
+
+
+
+
+
+   $('body').on('activate.bs.scrollspy', function () {
+     console.log('nice');
+   })
+
+
+
+
+
 });
+
+

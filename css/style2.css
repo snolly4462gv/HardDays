@@ -1,0 +1,63 @@
+/* #282823; -> #353533; */
+/* #20201B; ->  rgb(42, 42, 36);*/
+body {
+    background: rgb(42, 42, 36);
+}
+.who {
+    background: #353533;
+}
+.who__statistic:last-child:after {
+    background: #353533; 
+}
+.do__flex--top .do__item:last-child:after {
+    background: rgb(42, 42, 36);
+}
+.do__flex:last-child .do__item:first-child:after {
+    background: rgb(42, 42, 36);
+}
+.do__flex:last-child .do__item:last-child:after {
+    background: rgb(42, 42, 36);
+}
+.stack__content {
+    background: rgb(42, 42, 36);
+}
+.how {
+    background: #353533;
+}
+
+.top__more:after {
+    transition: 0.4s;
+    transform: translateX(-50%) rotate(90deg) scale(1);
+}
+.top__more:hover:after {
+  -webkit-transform: scale(1.1) translateX(-50%) translateY(4px) rotate(90deg);
+  -ms-ransform: scale(1.1) translateX(-50%) translateY(4px) rotate(90deg);
+  transform: scale(1.1) translateX(-50%) translateY(4px) rotate(90deg); 
+}
+
+.header__lang {
+    position: relative;
+}
+
+.header__lang-block {
+    display: none;
+    font-family: 'Helvetica Neue Cyr Light';
+    position: absolute;
+    list-style: none;
+    padding: 12px 20px;
+    margin-top: 8px;
+    background: #353533;
+}
+.header__lang-block--bottom {
+}
+.header__lang-block.open {
+    display: block;
+}
+
+.header__lang-block li{
+    padding: 4px 0;
+    cursor: pointer;
+}
+.header__lang-block li:hover {
+    color: #FFA901;
+}
