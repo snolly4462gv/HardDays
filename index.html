@@ -511,17 +511,21 @@
                     {
                         backgroundColor: 'rgba(0,0,0,0)',
                         borderColor: 'rgba(0,0,0,0)',
-                        data: [0, 200, 350, 950, 500,1000]
+                        // data: [0, 200, 350, 950, 500,1000]
+                        data: [0, 4, 6, 12, 8, 12]
+
                     },
                     {
                         backgroundColor: '#B2D73C',
                         borderColor: 'rgb(255, 99, 132)',
-                        data: [112,400,500,260,750]
+                        // data: [112,400,500,260,750]
+                        data: [2.35, 4.5, 4.5, 1, 5]
                     },
                     {
                         backgroundColor: '#DB3C71',
                         borderColor: 'rgb(255, 99, 132)',
-                        data: [88,200,450,260,1750,2000]
+                        // data: [88,200,450,260,1750,2000]
+                        data: [1.8, 2, 2.5, 1, 5, 6]
                     }
                 ]
             },
@@ -536,9 +540,26 @@
                         ticks: {
                             beginAtZero: false,
                             fontColor: '#fff',
-                            stepSize: 200,
+                            stepSize: 1,
                             callback: function(value, index, values) {
-                                return value + 'K₽';
+                                var v = 0;
+                                if(value >= 1) v = '50';
+                                if(value >= 2) v = '100';
+                                if(value >= 3) v = '150';
+                                if(value >= 4) v = '200';
+                                if(value >= 5) v = '300';
+                                if(value >= 6) v = '400';
+                                if(value >= 7) v = '500';
+                                if(value >= 8) v = '600';
+                                if(value >= 9) v = '700';
+                                if(value >= 10) v = '800';
+                                if(value >= 11) v = '900';
+                                if(value >= 12) v = '1000';
+                                if(value >= 13) v = '1500';
+                                if(value >= 14) v = '2000';
+                                if(value >= 15) v = '2500';
+                                if(value >= 16) v = '3000';
+                                return v + 'K₽';
                             }
                         }
                     }],
