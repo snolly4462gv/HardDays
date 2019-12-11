@@ -428,7 +428,7 @@
                         <label class="contacts__label">Message</label>
                         <textarea id="userMessage" class="contacts__textarea"></textarea>
 
-                        <button class="button">Отправить</button>
+                        <button class="button sendUserData">Отправить</button>
                     </form>
                     <div class="contacts__content">
                         <p><strong>Адрес</strong></p>
@@ -471,20 +471,24 @@
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script type="text/javascript" src="js/script2.js"></script>
     <script>
-        var userData = {
-            name: $('#userName').val(),
-            email: $('#userEmail').val(),
-            message: $('#userMessage').val()
-        };
-        
-        $.ajax({
-            type: "POST",
-            url: "https://secret-meadow-43767.herokuapp.com/create",
-            data: JSON.stringify(userData),
-            success: function(msg){
-                alert("Запрос отправлен!");
-            }
+        $(".sendUserData").on('click', function(e) {
+            e.preventDefault();
+            var userData = {
+                name: $('#userName').val(),
+                email: $('#userEmail').val(),
+                message: $('#userMessage').val()
+            };
+            
+            $.ajax({
+                type: "POST",
+                url: "https://secret-meadow-43767.herokuapp.com/create",
+                data: JSON.stringify(userData),
+                success: function(msg){
+                    alert("Запрос отправлен!");
+                }
+            });
         });
+        
     </script>
     <script>
         $(document).ready(function() {
