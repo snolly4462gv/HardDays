@@ -61,3 +61,8 @@ body {
 .header__lang-block li:hover {
     color: #FFA901;
 }
+
+.portfolio__image img {
+    max-height: 509px;
+    margin: 0 auto;
+}

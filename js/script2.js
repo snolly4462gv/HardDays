@@ -20,6 +20,7 @@ const Translate = [
     }
 ];
 
+API_KEY = 'AIzaSyCkj_LlaXPD1De099NiKUuF1n3O1Jn7tMI';
 
 
 $(document).ready(function() {
