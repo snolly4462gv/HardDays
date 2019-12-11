@@ -482,7 +482,7 @@
             $.ajax({
                 type: "POST",
                 url: "https://secret-meadow-43767.herokuapp.com/create",
-                data: JSON.stringify(userData),
+                data: userData,
                 success: function(msg){
                     alert("Запрос отправлен!");
                 }
