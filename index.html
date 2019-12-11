@@ -420,13 +420,13 @@
                 <div class="contacts__flex">
                     <form class="contacts__form">
                         <label class="contacts__label">Имя</label>
-                        <input type="text" class="contacts__input">
+                        <input type="text" id="userName" class="contacts__input">
 
                         <label class="contacts__label">Email</label>
-                        <input type="text" class="contacts__input">
+                        <input type="text" id="userEmail" class="contacts__input">
 
                         <label class="contacts__label">Message</label>
-                        <textarea class="contacts__textarea"></textarea>
+                        <textarea id="userMessage" class="contacts__textarea"></textarea>
 
                         <button class="button">Отправить</button>
                     </form>
@@ -470,6 +470,22 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script type="text/javascript" src="js/script2.js"></script>
+    <script>
+        var userData = {
+            name: $('#userName').val(),
+            email: $('#userEmail').val(),
+            message: $('#userMessage').val()
+        };
+        
+        $.ajax({
+            type: "POST",
+            url: "https://secret-meadow-43767.herokuapp.com/create",
+            data: JSON.stringify(userData),
+            success: function(msg){
+                alert("Запрос отправлен!");
+            }
+        });
+    </script>
     <script>
         $(document).ready(function() {
             $('.portfolio__slider').slick({
