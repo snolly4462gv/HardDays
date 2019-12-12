@@ -432,7 +432,8 @@ $(document).ready(function() {
 
 });
 
-
+labelsText = [];
+chart = null;
 function changeLang() {
     for (let item of Translate) {
         if(item.id) {     
@@ -440,18 +441,22 @@ function changeLang() {
                 $('.'+item.id).html(item[CurrentLang]);
         }
     }
-    initGraph();
+    
+    var labelsIds = ['i18n_landingpage','i18n_corporatewebsite','i18n_sitedirectory','i18n_onlinestore','i18n_mobileapp','i18n_developmentstartup'];
+     
+     for(let i = 0; i<labelsIds.length;i++) {
+         labelsText[i] = (Translate.find(x => x.id == labelsIds[i])[CurrentLang]);
+     }
+
+    if(chart)
+        upateGraph();
 }
 
 function initGraph() {
-     var labelsIds = ['i18n_landingpage','i18n_corporatewebsite','i18n_sitedirectory','i18n_onlinestore','i18n_mobileapp','i18n_developmentstartup'];
-     var labelsText = [];
-     for(let item of labelsIds) {
-         labelsText.push(Translate.find(x=>x.id == item)[CurrentLang]);
-     }
-     // ['Landing page', 'Корпоративный сайт', 'Сайт-каталог', 'Интернет- магазин', 'Мобильное приложение', 'Разработка для стартапа']
+     
+    labelsText = ['Landing page', 'Корпоративный сайт', 'Сайт-каталог', 'Интернет- магазин', 'Мобильное приложение', 'Разработка для стартапа']
      var ctx = document.getElementById('myChart').getContext('2d');
-     var chart = new Chart(ctx, {
+     chart = new Chart(ctx, {
          type: 'bar',
          data: {
              labels: labelsText,
@@ -542,4 +547,8 @@ function initGraph() {
              }
          }
      });
+}
+
+function upateGraph() {
+    chart.update();
 }
