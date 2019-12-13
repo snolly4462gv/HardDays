@@ -80,6 +80,10 @@ body {
     display: block;
 }
 
+.contacts__input.error {
+  border: 2px dashed #f12842;
+}
+
 #loadingBlock {
     position: fixed;
     top: 0;

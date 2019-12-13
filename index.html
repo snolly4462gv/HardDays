@@ -463,7 +463,21 @@
                 message: $('#userMessage').val()
             };
 
-            $('.status-img').removeClass('show')
+            $('.status-img').removeClass('show');
+            $('#userName').removeClass('error');
+            $('#userEmail').removeClass('error');
+
+            if(!userData.name) {
+                $('.send-error').addClass('show');
+                $('#userName').addClass('error');
+                return;
+            }
+
+            if(!userData.email) {
+                $('.send-error').addClass('show');
+                $('#userEmail').addClass('error');
+                return;
+            }
 
             $('#loadingBlock').addClass('show');
             
