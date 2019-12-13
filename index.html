@@ -404,7 +404,11 @@
                         <label class="contacts__label i18n_message">Message</label>
                         <textarea id="userMessage" class="contacts__textarea"></textarea>
 
-                        <button class="button sendUserData i18n_send">Отправить</button>
+                        <div class="button-send-with_status">
+                            <button class="button sendUserData i18n_send">Отправить</button>
+                            <img src="./img/check.svg" alt="" class="status-img send-success">
+                            <img src="./img/cancel.svg" alt="" class="status-img send-error">
+                        </div>
                     </div>
                     <div class="contacts__content">
                         <p class="i18n_address"><strong>Адрес</strong></p>
@@ -442,6 +446,10 @@
         <p class="footer__copy">Copyright © Hard days. All rights reserved.</p>
     </footer>
 
+    <div id="loadingBlock">
+        <div class="loading"></div>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
@@ -454,13 +462,22 @@
                 email: $('#userEmail').val(),
                 message: $('#userMessage').val()
             };
+
+            $('.status-img').removeClass('show')
+
+            $('#loadingBlock').addClass('show');
             
             $.ajax({
                 type: "POST",
                 url: "https://secret-meadow-43767.herokuapp.com/create",
                 data: userData,
                 success: function(msg){
-                    alert("Запрос отправлен!");
+                    $('#loadingBlock').removeClass('show');
+                    $('.send-success').addClass('show');
+                },
+                error: function (error) {
+                    $('#loadingBlock').removeClass('show');
+                    $('.send-error').addClass('show');                
                 }
             });
         });
