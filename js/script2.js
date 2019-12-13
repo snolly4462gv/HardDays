@@ -305,62 +305,132 @@ const Translate = [
 
     // TO DO PORTFOLIO
     {
-        id: "i18n_startups",
+        id: "i18n_development",
         type: "text",
-        ru: "Landing page",
-        en: "Landing page"
+        ru: "Разработка:",
+        en: "Development:"
     },
     {
-        id: "i18n_startups",
+        id: "i18n_desc_betrip",
         type: "text",
-        ru: "Стартапы",
-        en: "Startups"
+        ru: "Это мобильное приложение для туристов, которое позволяет строить самые красивые маршруты, используя данные социальных сетей для поиска необычных мест и персонализации",
+        en: "BeTrip is a mobile application for tourists, which allows you to build the most beautiful routes using a modern Al tech to analyze social media data by geotags and to keep the places data always updated."
     },
     {
-        id: "i18n_startups",
+        id: "i18n_estimation_betrip",
         type: "text",
-        ru: "Стартапы",
-        en: "Startups"
+        ru: "<span>Оценка:</span> ≈ 4 630 000 ₽",
+        en: "<span>Estimation: ≈ $89 000"
     },
     {
-        id: "i18n_startups",
+        id: "i18n_time_betrip",
         type: "text",
-        ru: "Стартапы",
-        en: "Startups"
+        ru: "<span>Время:</span> 4 месяца",
+        en: "<span>Time:</span> 4 month"
     },
     {
-        id: "i18n_startups",
+        id: "i18n_desc_triphub",
         type: "text",
-        ru: "Стартапы",
-        en: "Startups"
+        ru: "Инструмент для создания маршрутов. Позволяет добавлять точки на карту, анализировать продажи, аудиторию, популярность созданных мест и маршрутов.",
+        en: "The tool for creating routes. Allows you to add points to the map, analyze sales, audience, popularity of created places and routes."
     },
     {
-        id: "i18n_startups",
+        id: "i18n_estimation_triphub",
         type: "text",
-        ru: "Стартапы",
-        en: "Startups"
+        ru: "<span>Оценка:</span> ≈ 1 320 000 ₽",
+        en: "<span>Estimation: ≈ $13 700"
     },
     {
-        id: "i18n_startups",
+        id: "i18n_time_triphub",
         type: "text",
-        ru: "Стартапы",
-        en: "Startups"
+        ru: "<span>Время:</span> 2 месяца",
+        en: "<span>Time:</span> 2 month"
     },
     {
-        id: "i18n_startups",
+        id: "i18n_desc_mouse",
         type: "text",
-        ru: "Стартапы",
-        en: "Startups"
+        ru: "Краудфандинговая платформа, позволяющая быстро и модульно создавать музыкальные мероприятия.",
+        en: "Crowdfunding platform that allows you to create music events quickly and modularly"
     },
     {
-        id: "i18n_startups",
+        id: "i18n_estimation_mouse",
         type: "text",
-        ru: "Стартапы",
-        en: "Startups"
+        ru: "<span>Оценка:</span> ≈ 5 270 000 ₽",
+        en: "<span>Estimation: ≈ $102 000"
+    },
+    {
+        id: "i18n_time_mouse",
+        type: "text",
+        ru: "<span>Время:</span> 6 месяца",
+        en: "<span>Time:</span> 6 month"
+    },
+    {
+        id: "i18n_desc_foodapp",
+        type: "text",
+        ru: "Мобильное приложение, которое автоматизирует процесс посещения ресторана (от выбора ресторана до контроля денег и питания), позворяет делить счет со своими друзьями и оплачивать заказ через приложение.",
+        en: "A mobile application that automates the process of visiting a restaurant (from choosing a restaurant to controlling money and nutrition). The app allows to share the bill with your friends and pay for an order through the application."
+    },
+    {
+        id: "i18n_estimation_foodapp",
+        type: "text",
+        ru: "<span>Оценка:</span> ≈ 1 285 000 ₽",
+        en: "<span>Estimation: ≈ $24 000"
+    },
+    {
+        id: "i18n_time_foodapp",
+        type: "text",
+        ru: "<span>Время:</span> 3 месяца",
+        en: "<span>Time:</span> 3 month"
+    },
+    {
+        id: "i18n_desc_d4w",
+        type: "text",
+        ru: "Сервис позволяющий найти ближайший комфортный для вас коворкинг",
+        en: "Service which allows you to find the nearest comfortable coworking"
+    },
+    {
+        id: "i18n_estimation_d4w",
+        type: "text",
+        ru: "<span>Оценка:</span> ≈ 1 923 000 ₽",
+        en: "<span>Estimation: ≈ $30 000"
+    },
+    {
+        id: "i18n_time_d4w",
+        type: "text",
+        ru: "<span>Время:</span> 3 месяца",
+        en: "<span>Time:</span> 3 month"
+    },
+    {
+        id: "i18n_desc_d4w_frontend_coworking",
+        type: "text",
+        ru: "Frontend: React - для коворкинга",
+        en: "Frontend: React - for coworkings"
+    },
+    {
+        id: "i18n_desc_d4w_frontend_user",
+        type: "text",
+        ru: "Frontend: TypeScript (Angular2+) - для пользователей",
+        en: "Frontend: TypeScript (Angular2+) - for users"
+    },
+    {
+        id: "i18n_desc_venturebox",
+        type: "text",
+        ru: "Платформа для трекинга процесса развития стартапа со стороны инвестора",
+        en: "Platform for tracking the startup development process from the investor side."
+    },
+    {
+        id: "i18n_estimation_venturebox",
+        type: "text",
+        ru: "<span>Оценка:</span> ≈ 1 575 000 ₽",
+        en: "<span>Estimation: ≈ $35 000"
+    },
+    {
+        id: "i18n_time_venturebox",
+        type: "text",
+        ru: "<span>Время:</span> 3 месяца",
+        en: "<span>Time:</span> 3 month"
     }
 ];
-
-API_KEY = 'AIzaSyCkj_LlaXPD1De099NiKUuF1n3O1Jn7tMI';
 
 
 $(document).ready(function() {
