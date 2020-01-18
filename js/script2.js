@@ -16,7 +16,7 @@ const Translate = [
         id: "i18n_forwhomwedo",
         type: "text",
         ru: "Для кого делаем",
-        en: "(!) Для кого делаем"
+        en: "For whom"
     },
     {
         id: "i18n_howdowework",
@@ -124,7 +124,7 @@ const Translate = [
         id: "i18n_forwhomtext",
         type: "text",
         ru: "Мы работаем как с молодыми <strong>стартапами</strong>, помогая им выбрать и реализовать запоминающийся стиль, так и с <strong>компаниями</strong>, которые хотят повысить свои продажи",
-        en: "(!) Мы работаем как с молодыми <strong>стартапами</strong>, помогая им выбрать и реализовать запоминающийся стиль, так и с <strong>компаниями</strong>, которые хотят повысить свои продажи"
+        en: "We work with young startups to help them choose and develop brand new idea as well as with the large businesses, that wants to increasу their revenues"
     },
     {
         id: "i18n_companies",
@@ -600,7 +600,10 @@ function initGraph() {
                                 if(value >= 16) v = '55000';
                             }
 
-                            return v + Translate.find(x=>x.id == 'i18n_currency')[CurrentLang];
+
+                            const returnText = $( window ).width() > 500 ? v + Translate.find(x=>x.id == 'i18n_currency')[CurrentLang] : '';
+
+                            return returnText;
                          }
                      }
                  }],
