@@ -495,6 +495,19 @@
                 }
             });
         });
+
+        $(".header__mobile-menu-button").on('click', function(e) {
+            if($('.header__menu-wrap').hasClass('header__menu-wrap--opened')) {
+                $('.header__menu-wrap').removeClass('header__menu-wrap--opened')
+            } else {
+                $('.header__menu-wrap').addClass('header__menu-wrap--opened')
+            }
+        });
+
+        $('.header__link') .on('click', function(e){
+            $('.header__menu-wrap').removeClass('header__menu-wrap--opened')
+        });
+
         
     </script>
     <script>
